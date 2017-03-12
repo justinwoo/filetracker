@@ -61,7 +61,7 @@ function main(sources) {
                 file
               }
             }, file),
-            button('.file-button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent', {
+            button(`.file-button.mdl-button.mdl-button--raised${watched ? '.mdl-button--accent' : ''}`, {
               style: {
                 width: '100px'
               },
