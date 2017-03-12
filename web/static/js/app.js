@@ -61,7 +61,7 @@ function main(sources) {
                 file
               }
             }, file),
-            button('.file-button', {
+            button('.file-button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent', {
               style: {
                 width: '100px'
               },
@@ -82,10 +82,10 @@ function main(sources) {
       url: '/api/data',
       category: 'data'
     }]),
-    sources.dom.select('.file-button').events('click')
+    sources.dom.select('button.file-button').events('click')
       .map(e => ({
         file: e.target.dataset.file,
-        watched: !e.target.dataset.watched
+        watched: e.target.dataset.watched === 'true' ? false : true
       }))
       .map(send => ({
         url: '/api/update',

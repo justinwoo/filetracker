@@ -1,7 +1,7 @@
 defmodule Filetracker.ApiController do
   use Filetracker.Web, :controller
-  import Filetracker.Util  
-  
+  import Filetracker.Util
+
   def open(conn, params) do
     %{"file" => file} = params
     # amazing, Path.join doesn't handle this correctly to make this work on windows
